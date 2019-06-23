@@ -4,6 +4,6 @@
     <string name="grid">grid</string>
     <string name="with_cardview">cardview</string>
     <string name="detail">detail</string>
-    <string name="Detail">Detail</string>
     <string name="Share">Share</string>
+    <string name="Detail">Detail</string>
 </resources>

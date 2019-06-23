@@ -1,7 +1,6 @@
 package afniramadania.tech.jenisabkapp;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class AbkData {
     public static String[][] data = new String[][]{
@@ -11,8 +10,12 @@ public class AbkData {
             {"Tuna Rungu", "Anak Disabilitas Pendengaran",
                     "https://i.ibb.co/vLbt6nK/tuna-rungu.jpg",
             "Anak Disabilitas Pendengaran, dulu disebut tunarungu. Anak dalam kategori ini adalah anak yang memiliki hambatan pendengaran baik ringan maupun berat"},
-            {"Tuna Grahita", "Anak Disabilitas Intelektual",
+            {"Down Syndrom", "Anak Kembar Sedunia",
                     "https://i.ibb.co/MgYjKft/tuna-grahita.jpg",
+                    "Down syndrome pada umumnya bukanlah penyakit keturunan. Down syndrome (DS) adalah suatu kelainan genetik yang terjadi ketika bayi yang dikandung memiliki tambahan kromosom 21, baik salinan penuh atau hanya sebagian, yang terbentuk saat perkembangan sel telur, sperma, atau embrio..",
+            },
+            {"Tuna Grahita", "Anak Disabilitas Intelektual",
+                    "https://i.ibb.co/vmQcBCn/tg2.jpg",
             "Anak Disabilitas Intelektual (Retardasi Mental), dulu disebut tunagrahita. Anak dalam kategori ini adalah anak yang memiliki intelejensi kurang dari rata-rata atau dengan IQ di bawah 70."},
             {"Tuna Daksa", "Anak Disabilitas Tubuh",
                     "https://i.ibb.co/SR9ccvz/tuna-daksa.jpg",
@@ -32,6 +35,10 @@ public class AbkData {
             {"Giftedness", "Anak Berbakat",
                     "https://i.ibb.co/wzCPpYh/gifdness.jpg",
             "Anak Berbakat. Anak dalam kategori ini adalah anak yang memiliki kemampuan akademis atau nonakademis melebihi anak pada umumnya.",
+            },
+            {"Cerebral Palsy", "Anak Lumpuh Otak",
+                    "https://i.ibb.co/mJkSXB3/cp.jpg",
+                    "Gejala cerebral palsy berkisar dari ringan hingga berat dan biasanya tidak begitu jelas untuk diamati setelah bayi lahir. Gejala ini juga bervariasi tergantung dari bagian otak yang terkena. Beberapa kasus bisa hanya mempengaruhi satu sisi tubuh dan ada juga bahkan yang mempengaruhi seluruh tubuh." ,
             }
     };
 

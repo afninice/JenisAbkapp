@@ -64,8 +64,13 @@ public class CardViewAbkAdapter extends RecyclerView.Adapter<CardViewAbkAdapter.
         return getListAbk().size();
     }
 
+    public void startactivity(Intent intent){
 
-    public class CardViewViewHolder extends RecyclerView.ViewHolder {
+    }
+
+
+
+    public class CardViewViewHolder extends RecyclerView.ViewHolder  {
         ImageView imgPhoto;
         TextView tvName, tvRemarks;
         Button btnDetail, btnShare;
@@ -73,19 +78,27 @@ public class CardViewAbkAdapter extends RecyclerView.Adapter<CardViewAbkAdapter.
 
         CardViewViewHolder(View itemView) {
             super(itemView);
-            imgPhoto = itemView.findViewById(R.id.img_item_photo);
-            tvName = itemView.findViewById(R.id.tv_item_name);
-            tvRemarks = itemView.findViewById(R.id.tv_item_remarks);
-            btnShare = itemView.findViewById(R.id.btn_set_share);
-            btnDetail = itemView.findViewById(R.id.btn_set_detail);
-            btnDetail.setOnClickListener((View.OnClickListener) this);
+            imgPhoto = (ImageView) itemView.findViewById(R.id.img_item_photo);
+            tvName = (TextView) itemView.findViewById(R.id.tv_item_name);
+            tvRemarks = (TextView) itemView.findViewById(R.id.tv_item_remarks);
+            btnShare = (Button) itemView.findViewById(R.id.btn_set_share);
+            btnDetail.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, DetailAbk.class);
+                    intent.putExtra("key", abk);
+                    context.startActivity(intent);
+
+                }
+            });
+
+
         }
 
-        public void onClick(View view) {
-            Intent intent = new Intent(context, DetailAbk.class);
-            intent.putExtra("key", abk);
-            context.startActivity(intent);
-        }
 
     }
-}
+    }
+
+
+
+

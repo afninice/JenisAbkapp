@@ -4,7 +4,33 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Abk implements Parcelable {
-    public String name, remarks, photo, deskripsi;
+    private String name, remarks, photo, deskripsi;
+
+    protected Abk (Parcel in) {
+        name = in.readString();
+        remarks = in.readString();
+        photo = in.readString();
+        deskripsi = in.readString();
+    }
+
+    public static final Creator<Abk> CREATOR = new Creator<Abk>() {
+        @Override
+        public Abk createFromParcel(Parcel in) {
+            return new Abk(in);
+        }
+
+        @Override
+        public Abk[] newArray(int size) {
+            return new Abk[size];
+        }
+    };
+
+
+    public Abk() {
+
+    }
+
+
 
     public String getName() {
         return name;
@@ -41,7 +67,7 @@ public class Abk implements Parcelable {
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
+    public void writeToParcel(Parcel dest, int i) {
         dest.writeString(this.name);
         dest.writeString(this.remarks);
         dest.writeString(this.photo);
@@ -49,25 +75,5 @@ public class Abk implements Parcelable {
 
     }
 
-    public Abk() {
 
-    }
-
-    protected Abk(Parcel in) {
-        this.name = in.readString();
-        this.remarks = in.readString();
-        this.photo = in.readString();
-        this.deskripsi = in.readString();
-    }
-
-    public static final Parcelable.Creator<Abk> CREATOR = new Parcelable.Creator<Abk>() {
-        @Override
-        public Abk createFromParcel(Parcel source) {
-            return new Abk(source);
-        }
-        @Override
-        public Abk[] newArray(int size) {
-            return new Abk[size];
-        }
-    };
 }
